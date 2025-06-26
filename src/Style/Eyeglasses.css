@@ -1,0 +1,542 @@
+.EyeGlassesSection {
+    /* background-color: black; */
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+}
+
+/* Default styles for larger screens */
+.EyeGlassesSection-Left {
+    background-color: #fff;
+    width: 320px;
+    display: block;
+}
+
+.filter-section {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.frame-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.frame-option:hover {
+    cursor: pointer;
+}
+
+.frame-option {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.frame-option:hover {
+    border: 1px solid black;
+}
+
+.filter-menu {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.filter-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 8px 38px 8px 20px;
+}
+
+.filter-button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filter-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Media Queries */
+
+/* For screen sizes between 300px and 576px */
+@media (max-width: 576px) {
+    .ShowBtn{
+        display: block;
+    }
+    .EyeGlassesSection{
+        position: relative;
+    }
+    .EyeGlassesSection-Left {
+        width: 90%;
+        /* display: none; */
+        position: absolute;
+        z-index: 999;
+    }
+
+    .filter-section {
+        padding: 10px;
+    }
+
+    .frame-option {
+        width: 60px;
+        height: 60px;
+        margin: 3px;
+    }
+
+    .filter-menu {
+        width: 100%;
+    }
+
+    .filter-item {
+        padding: 6px 20px;
+    }
+}
+
+/* For screen sizes between 576px and 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .EyeGlassesSection-Left {
+        width: 100%;
+    }
+
+    .filter-section {
+        padding: 15px;
+    }
+
+    .frame-option {
+        width: 65px;
+        height: 65px;
+        margin: 4px;
+    }
+
+    .filter-menu {
+        width: 100%;
+    }
+
+    .filter-item {
+        padding: 7px 30px;
+    }
+}
+
+/* For screen sizes between 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .EyeGlassesSection-Left {
+        width: 100%;
+    }
+
+    .filter-section {
+        padding: 20px;
+    }
+
+    .frame-option {
+        width: 70px;
+        height: 70px;
+        margin: 5px;
+    }
+
+    .filter-menu {
+        width: 100%;
+    }
+
+    .filter-item {
+        padding: 8px 38px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EyeGlassesSection-Right  */
+.EyeGlassesSection-Right {
+    /* background-color: rgb(67, 202, 40); */
+    /* margin: 0px 0px 0px 300px; */
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* height: 100vh; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+/* src/ProductCard.css */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 15px 10px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.card-header {
+    position: relative;
+    height: 34vh;
+    padding: 26px 0px 0px;
+}
+
+.HeartIcon {
+    font-size: 30px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+.product-image1 {
+    width: 372px;
+    /* height: 189px; */
+    padding: 10px;
+}
+
+.product-image2 {
+    width: 372px;
+    /* height: 189px; */
+    padding: 10px;
+    display: none;
+    transition: 0.5s;
+}
+
+
+.card-header:hover .product-image2 {
+    transition: 0.5s;
+    display: block;
+    cursor: pointer;
+}
+
+.card-header:hover .product-image1 {
+    display: none;
+    cursor: pointer;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 15px 15px 0px 12px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating-value {
+    color: #4caf50;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.rating-count {
+    color: #757575;
+}
+
+.ColorAndPrizeSize {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center;
+    margin-bottom: 10px; */
+}
+
+.product-title {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+.product-size {
+    color: #757575;
+    margin: 0 0 10px 0;
+    font-size: 12px;
+}
+
+.product-price {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.color-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.color-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    /* border: 1px solid #ccc; */
+    outline: 1.5px dotted red !important;
+}
+
+.black {
+    background-color: #000;
+}
+
+.blue {
+    background-color: #3b5998;
+}
+
+.gray {
+    background-color: #9e9e9e;
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: #757575;
+    font-size: 14px;
+}
+
+.offer {
+    background-color: #fff8e1;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    color: #757575;
+    font-size: 12px;
+}
+
+/* For screens between 300px and 576px */
+@media only screen and (max-width: 576px) {
+    .EyeGlassesSection-Right {
+        margin: auto;
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product-card {
+        width: 100px;
+        margin: 0px;
+    }
+
+    .card-header {
+        height: auto;
+        padding: 0px;
+    }
+
+    .product-image1 {
+        /* width: 250px;
+        height: 150px;
+        padding: 10px; */
+        /* background-color: red; */
+    }
+
+
+
+    .HeartIcon {
+        font-size: 24px;
+        right: 10px;
+        top: 10px;
+        display: none;
+    }
+
+    .card-body {
+        padding: 0px;
+    }
+
+    .product-title {
+        font-size: 12px;
+    }
+
+    .product-size,
+    .product-price {
+        font-size: 12px;
+    }
+
+    .ColorAndPrizeSize {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center;
+        margin-bottom: 10px; */
+    }
+
+    .offer {
+        font-size: 4px;
+        padding: 0px;
+        /* display: none; */
+    }
+
+    .color-dot {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* For screens between 576px and 768px */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .EyeGlassesSection-Right {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+        width: 48%;
+        margin: 10px 5px;
+    }
+
+    .card-header {
+        height: 30vh;
+    }
+
+    .product-image1,
+    .product-image2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .HeartIcon {
+        font-size: 26px;
+    }
+
+    .product-title {
+        font-size: 13px;
+    }
+
+    .product-size,
+    .product-price {
+        font-size: 13px;
+    }
+
+    .offer {
+        font-size: 11px;
+        padding: 4px;
+    }
+
+    .color-dot {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* For screens between 768px and 992px */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .EyeGlassesSection-Right {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+        width: 30%;
+        margin: 10px 5px;
+    }
+
+    .card-header {
+        height: 28vh;
+    }
+
+    .product-image1,
+    .product-image2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .HeartIcon {
+        font-size: 28px;
+    }
+
+    .product-title {
+        font-size: 14px;
+    }
+
+    .product-size,
+    .product-price {
+        font-size: 14px;
+    }
+
+    .offer {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .color-dot {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Pagination */
+.botton-page-button {
+    /* text-align: center;
+    align-items: center;
+    width: 300%;
+    margin: auto; */
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pagination-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pagination-button:hover {
+    background-color: #0056b3;
+}
+
+.page-number {
+    font-size: 18px;
+    margin: 0 20px;
+}

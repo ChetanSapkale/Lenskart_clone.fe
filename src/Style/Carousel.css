@@ -1,0 +1,227 @@
+.trend-section {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+    justify-content: space-around;
+}
+
+.wearTrend {
+    font-size: 3rem;
+    color: #333333;
+    text-align: start;
+}
+
+.wearTrend div {
+    font-weight: bold;
+    color: #333333;
+}
+
+.TrendyTag {
+    font-size: 1rem;
+    color: #333333;
+}
+
+.trend-items-main {
+    display: flex;
+    overflow-x: auto;
+}
+
+.trend-item {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #333333;
+    margin: 0px 5px;
+}
+
+.trend-item img {
+    width: 250px;
+}
+
+.trend-item p {
+    margin: 0px 0 10px 0px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.trend-item button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.trend-item button:hover {
+    background-color: #008c9e;
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+    .trend-section {
+        flex-direction: column;
+    }
+
+    .wearTrend {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .trend-items-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trend-item img {
+        width: 200px;
+    }
+
+    .trend-item {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .wearTrend {
+        font-size: 2.5rem;
+    }
+
+    .trend-item img {
+        width: 220px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .wearTrend {
+        font-size: 2.8rem;
+    }
+
+    .trend-item img {
+        width: 230px;
+    }
+}
+
+/* LineWithText.css */
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.line-text {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.line-text::before,
+.line-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 130%;
+    border-top: 1px solid #cfcdcd;
+}
+
+.line-text::before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.line-text::after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+/* LineWithText.css 2nd */
+.line-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.line-text2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.line-text2::before,
+.line-text2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    border-top: 1px solid #cfcdcd;
+}
+
+.line-text2::before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.line-text2::after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+/* Responsive Adjustments for LineWithText */
+@media (max-width: 576px) {
+
+    .line-text,
+    .line-text2 {
+        font-size: 12px;
+    }
+
+    .line-text::before,
+    .line-text::after,
+    .line-text2::before,
+    .line-text2::after {
+        /* width: 100%; */
+        display: none;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+    .line-text,
+    .line-text2 {
+        font-size: 25px;
+    }
+
+    .line-text::before,
+    .line-text::after,
+    .line-text2::before,
+    .line-text2::after {
+        /* width: 120%; */
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .line-text,
+    .line-text2 {
+        font-size: 28px;
+    }
+
+    .line-text::before,
+    .line-text::after,
+    .line-text2::before,
+    .line-text2::after {
+        /* width: 130%; */
+        display: none;
+    }
+}

@@ -78,7 +78,7 @@ const Description = () => {
               <button className="buy-now" onClick={() => AddCard(id)}>
                 Add to Cart
               </button>
-            </Link>-
+            </Link>
           </div>
         </div>
       </div>
